@@ -16,6 +16,7 @@ import UIKit
 //Login View Controller
 //Author:
 class ViewController: UIViewController, UITextFieldDelegate{
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
 
     @IBOutlet var txtUsername:UITextField!
     @IBOutlet var txtPassword:UITextField!
@@ -24,8 +25,27 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
     
     @IBAction func testLogin(sender:UIButton){
-        print(txtUsername.text)
-        print(txtPassword.text)
+        if mainDelegate.login(loginUsername: txtUsername.text!, loginPassword: txtPassword.text!){
+            let alert = UIAlertController(title: "Logging in",
+                                          message: "Welcome, " + txtUsername.text!,
+                                          preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Ok",
+                                             style: .cancel,
+                                             handler: nil)
+            alert.addAction(cancelAction)
+            present(alert, animated:true)
+        } else {
+            let alert = UIAlertController(title: "Failed to login!",
+                                                  message: "Invalid Username or Password",
+                                                  preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Ok",
+                                             style: .cancel,
+                                             handler: nil)
+            alert.addAction(cancelAction)
+            present(alert, animated:true)
+        }
     }
     
     override func viewDidLoad() {
