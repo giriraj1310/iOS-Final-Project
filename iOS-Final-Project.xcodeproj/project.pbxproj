@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AE0242412256669700079B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0242402256669700079B9B /* Assets.xcassets */; };
+		AE02424322567C0400079B9B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE02424222567C0400079B9B /* Account.swift */; };
+		AE02424522567DF300079B9B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE02424422567DF200079B9B /* SiteCell.swift */; };
+		AE02424922567EB000079B9B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE02424722567EB000079B9B /* libsqlite3.0.tbd */; };
+		AE02424A22567EB000079B9B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE02424822567EB000079B9B /* libsqlite3.tbd */; };
+		AE02424C22567EB600079B9B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE02424B22567EB600079B9B /* WebKit.framework */; };
+		AE02424E225682B900079B9B /* Procrastify.db in Resources */ = {isa = PBXBuildFile; fileRef = AE02424D225682B900079B9B /* Procrastify.db */; };
 		AE29A8812255EFA4006CD4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE29A8802255EFA4006CD4EB /* AppDelegate.swift */; };
 		AE29A8832255EFA4006CD4EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE29A8822255EFA4006CD4EB /* ViewController.swift */; };
 		AE29A8862255EFA4006CD4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE29A8842255EFA4006CD4EB /* Main.storyboard */; };
@@ -17,6 +23,12 @@
 
 /* Begin PBXFileReference section */
 		AE0242402256669700079B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE02424222567C0400079B9B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		AE02424422567DF200079B9B /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
+		AE02424722567EB000079B9B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AE02424822567EB000079B9B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AE02424B22567EB600079B9B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		AE02424D225682B900079B9B /* Procrastify.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Procrastify.db; sourceTree = "<group>"; };
 		AE29A87D2255EFA4006CD4EB /* iOS-Final-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Final-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE29A8802255EFA4006CD4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE29A8822255EFA4006CD4EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +43,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE02424C22567EB600079B9B /* WebKit.framework in Frameworks */,
+				AE02424922567EB000079B9B /* libsqlite3.0.tbd in Frameworks */,
+				AE02424A22567EB000079B9B /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE02424622567EB000079B9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE02424B22567EB600079B9B /* WebKit.framework */,
+				AE02424722567EB000079B9B /* libsqlite3.0.tbd */,
+				AE02424822567EB000079B9B /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AE29A8742255EFA4006CD4EB = {
 			isa = PBXGroup;
 			children = (
 				AE29A87F2255EFA4006CD4EB /* iOS-Final-Project */,
 				AE29A87E2255EFA4006CD4EB /* Products */,
+				AE02424622567EB000079B9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +112,9 @@
 		AE29A8942255F02B006CD4EB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AE02424422567DF200079B9B /* SiteCell.swift */,
 				AE29A8802255EFA4006CD4EB /* AppDelegate.swift */,
+				AE02424222567C0400079B9B /* Account.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -103,6 +131,7 @@
 		AE29A8962255F04E006CD4EB /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				AE02424D225682B900079B9B /* Procrastify.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -169,6 +198,7 @@
 				AE29A88B2255EFA7006CD4EB /* LaunchScreen.storyboard in Resources */,
 				AE0242412256669700079B9B /* Assets.xcassets in Resources */,
 				AE29A8862255EFA4006CD4EB /* Main.storyboard in Resources */,
+				AE02424E225682B900079B9B /* Procrastify.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +211,8 @@
 			files = (
 				AE29A8832255EFA4006CD4EB /* ViewController.swift in Sources */,
 				AE29A8812255EFA4006CD4EB /* AppDelegate.swift in Sources */,
+				AE02424522567DF300079B9B /* SiteCell.swift in Sources */,
+				AE02424322567C0400079B9B /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
