@@ -24,6 +24,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var btnRegister:UIButton!
 
     
+    @IBAction func unwindToHomeVC(sender: UIStoryboardSegue){
+        
+    }
+    
     @IBAction func testLogin(sender:UIButton){
         if mainDelegate.login(loginUsername: txtUsername.text!, loginPassword: txtPassword.text!){
             let alert = UIAlertController(title: "Logging in",

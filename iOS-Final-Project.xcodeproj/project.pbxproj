@@ -19,6 +19,10 @@
 		AE29A8862255EFA4006CD4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE29A8842255EFA4006CD4EB /* Main.storyboard */; };
 		AE29A88B2255EFA7006CD4EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE29A8892255EFA7006CD4EB /* LaunchScreen.storyboard */; };
 		AE29A8982255F15A006CD4EB /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = AE29A8972255F15A006CD4EB /* loading.png */; };
+		AE4FD319225FEF5A004998E0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4FD318225FEF5A004998E0 /* RegisterViewController.swift */; };
+		AE4FD31B225FF123004998E0 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4FD31A225FF123004998E0 /* background.jpg */; };
+		AE4FD31D225FF1DA004998E0 /* submit.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4FD31C225FF1D9004998E0 /* submit.png */; };
+		AE4FD31F225FFD01004998E0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4FD31E225FFD01004998E0 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		AE29A88A2255EFA7006CD4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE29A88C2255EFA7006CD4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE29A8972255F15A006CD4EB /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		AE4FD318225FEF5A004998E0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AE4FD31A225FF123004998E0 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		AE4FD31C225FF1D9004998E0 /* submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit.png; sourceTree = "<group>"; };
+		AE4FD31E225FFD01004998E0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				AE29A8822255EFA4006CD4EB /* ViewController.swift */,
+				AE4FD318225FEF5A004998E0 /* RegisterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -104,6 +113,8 @@
 		AE29A8932255F024006CD4EB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE4FD31C225FF1D9004998E0 /* submit.png */,
+				AE4FD31A225FF123004998E0 /* background.jpg */,
 				AE29A8972255F15A006CD4EB /* loading.png */,
 			);
 			path = Images;
@@ -115,6 +126,7 @@
 				AE02424422567DF200079B9B /* SiteCell.swift */,
 				AE29A8802255EFA4006CD4EB /* AppDelegate.swift */,
 				AE02424222567C0400079B9B /* Account.swift */,
+				AE4FD31E225FFD01004998E0 /* Data.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -195,8 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE29A8982255F15A006CD4EB /* loading.png in Resources */,
+				AE4FD31D225FF1DA004998E0 /* submit.png in Resources */,
 				AE29A88B2255EFA7006CD4EB /* LaunchScreen.storyboard in Resources */,
 				AE0242412256669700079B9B /* Assets.xcassets in Resources */,
+				AE4FD31B225FF123004998E0 /* background.jpg in Resources */,
 				AE29A8862255EFA4006CD4EB /* Main.storyboard in Resources */,
 				AE02424E225682B900079B9B /* Procrastify.db in Resources */,
 			);
@@ -210,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE29A8832255EFA4006CD4EB /* ViewController.swift in Sources */,
+				AE4FD31F225FFD01004998E0 /* Data.swift in Sources */,
+				AE4FD319225FEF5A004998E0 /* RegisterViewController.swift in Sources */,
 				AE29A8812255EFA4006CD4EB /* AppDelegate.swift in Sources */,
 				AE02424522567DF300079B9B /* SiteCell.swift in Sources */,
 				AE02424322567C0400079B9B /* Account.swift in Sources */,
