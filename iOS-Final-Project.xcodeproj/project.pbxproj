@@ -25,6 +25,11 @@
 		AE4FD31D225FF1DA004998E0 /* submit.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4FD31C225FF1D9004998E0 /* submit.png */; };
 		AE4FD31F225FFD01004998E0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4FD31E225FFD01004998E0 /* Data.swift */; };
 		AE547E8622646EB1007629E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E8522646EB1007629E2 /* HomeViewController.swift */; };
+		AE547E88226483B3007629E2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E87226483B3007629E2 /* SettingsViewController.swift */; };
+		AE547E8A226483CC007629E2 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E89226483CC007629E2 /* CreatePostViewController.swift */; };
+		AE547E8C226483DB007629E2 /* ViewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E8B226483DB007629E2 /* ViewPostViewController.swift */; };
+		AE547E8E22648489007629E2 /* ViewMyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E8D22648489007629E2 /* ViewMyAccountViewController.swift */; };
+		AE547E90226486CC007629E2 /* WebContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E8F226486CC007629E2 /* WebContentViewController.swift */; };
 		AE61FACE22645D7200B0B566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +55,11 @@
 		AE4FD31C225FF1D9004998E0 /* submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit.png; sourceTree = "<group>"; };
 		AE4FD31E225FFD01004998E0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		AE547E8522646EB1007629E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AE547E87226483B3007629E2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AE547E89226483CC007629E2 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		AE547E8B226483DB007629E2 /* ViewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostViewController.swift; sourceTree = "<group>"; };
+		AE547E8D22648489007629E2 /* ViewMyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMyAccountViewController.swift; sourceTree = "<group>"; };
+		AE547E8F226486CC007629E2 /* WebContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentViewController.swift; sourceTree = "<group>"; };
 		AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D07329111DBAB9063EF3C050 /* Pods-iOS-Final-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Final-Project.release.xcconfig"; path = "Target Support Files/Pods-iOS-Final-Project/Pods-iOS-Final-Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +129,11 @@
 				AE29A8822255EFA4006CD4EB /* ViewController.swift */,
 				AE4FD318225FEF5A004998E0 /* RegisterViewController.swift */,
 				AE547E8522646EB1007629E2 /* HomeViewController.swift */,
+				AE547E87226483B3007629E2 /* SettingsViewController.swift */,
+				AE547E89226483CC007629E2 /* CreatePostViewController.swift */,
+				AE547E8B226483DB007629E2 /* ViewPostViewController.swift */,
+				AE547E8D22648489007629E2 /* ViewMyAccountViewController.swift */,
+				AE547E8F226486CC007629E2 /* WebContentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -363,12 +378,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE29A8832255EFA4006CD4EB /* ViewController.swift in Sources */,
+				AE547E8C226483DB007629E2 /* ViewPostViewController.swift in Sources */,
 				AE4FD31F225FFD01004998E0 /* Data.swift in Sources */,
 				AE4FD319225FEF5A004998E0 /* RegisterViewController.swift in Sources */,
 				AE29A8812255EFA4006CD4EB /* AppDelegate.swift in Sources */,
+				AE547E90226486CC007629E2 /* WebContentViewController.swift in Sources */,
 				AE02424522567DF300079B9B /* SiteCell.swift in Sources */,
 				AE547E8622646EB1007629E2 /* HomeViewController.swift in Sources */,
+				AE547E8E22648489007629E2 /* ViewMyAccountViewController.swift in Sources */,
 				AE02424322567C0400079B9B /* Account.swift in Sources */,
+				AE547E8A226483CC007629E2 /* CreatePostViewController.swift in Sources */,
+				AE547E88226483B3007629E2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

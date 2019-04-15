@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
     @IBOutlet var btnRegister:UIButton!
 
     
-    @IBAction func unwindToHomeVC(sender: UIStoryboardSegue){
+    @IBAction func unwindToIndexVC(sender: UIStoryboardSegue){
         
     }
     
@@ -82,7 +82,18 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
         authUI?.providers = providers
         
         
+       
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if Auth.auth().currentUser != nil {
+            print("HELOOoOOOOOOOOoOOO")
+            print(Auth.auth().currentUser?.email)
+            self.performSegue(withIdentifier: "toHomeViewController", sender: nil)
+        }
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {

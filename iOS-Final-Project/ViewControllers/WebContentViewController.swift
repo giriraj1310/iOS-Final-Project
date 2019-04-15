@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  WebContentViewController.swift
 //  iOS-Final-Project
 //
 //  Created by Xcode User on 2019-04-15.
@@ -8,12 +8,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    @IBAction func unwindToHomeVC(sender: UIStoryboardSegue){
-        
-    }
-    
+class WebContentViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

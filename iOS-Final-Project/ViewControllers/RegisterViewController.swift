@@ -17,7 +17,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
-    
     // The datePicker which will be initialized when the user clicks on the text field
     let datePicker = UIDatePicker()
     
