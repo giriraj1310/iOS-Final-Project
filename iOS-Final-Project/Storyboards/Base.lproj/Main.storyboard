@@ -86,11 +86,38 @@
                         <outlet property="btnRegister" destination="4d7-42-xJa" id="XOw-2u-f0z"/>
                         <outlet property="txtPassword" destination="1tD-rM-YNx" id="WYe-MD-zaZ"/>
                         <outlet property="txtUsername" destination="Mii-JD-dJZ" id="7Nr-Ae-LBl"/>
+                        <segue destination="4XI-MJ-4ta" kind="presentation" id="WiA-wq-SvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="gD8-sf-lyL">
+            <objects>
+                <viewController id="4XI-MJ-4ta" customClass="HomeViewController" customModule="iOS_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SSf-1y-n5w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UY6-tL-pvQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Home" id="PVJ-Iu-Vnn">
+                                        <barButtonItem key="leftBarButtonItem" id="Sxj-Mo-c5k"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="amt-zd-XqV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBZ-Pw-ePo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="909"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="7x0-Qd-7lI">
@@ -186,6 +213,7 @@
                         <outlet property="tfName" destination="9Us-aA-hXB" id="j5v-sr-7ay"/>
                         <outlet property="tfPassword" destination="vfc-uB-of6" id="M2e-tb-9Yv"/>
                         <outlet property="tfPhone" destination="X5J-BF-Ryf" id="sZ9-Fq-9KU"/>
+                        <segue destination="4XI-MJ-4ta" kind="presentation" id="GQt-S2-67Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIh-go-zjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,4 +227,7 @@
         <image name="logo" width="185" height="38"/>
         <image name="submit.png" width="496" height="189"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GQt-S2-67Z"/>
+    </inferredMetricsTieBreakers>
 </document>
