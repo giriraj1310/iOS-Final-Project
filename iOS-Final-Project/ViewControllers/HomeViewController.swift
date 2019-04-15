@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import AVFoundation
+import Firebase
 
 class HomeViewController: UIViewController {
     var forcePlayOnce: Bool = false
@@ -32,6 +33,11 @@ class HomeViewController: UIViewController {
         soundPlayer?.volume = 80
         soundPlayer?.numberOfLoops = 0
         
+
+        do {
+            try Auth.auth().signOut()
+        } catch {}
+
         if forcePlayOnce == false {
         soundPlayer?.play()
             forcePlayOnce = true
