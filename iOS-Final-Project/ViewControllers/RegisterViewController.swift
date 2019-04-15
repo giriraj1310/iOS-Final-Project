@@ -18,13 +18,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                                    completion: {(user,error) in
                                     if error == nil {
                                         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-
+                                        
                                         mainDelegate.ref?.child("accounts")
-                                        .childByAutoId()
-                                            .child("accountInfo").setValue(["email":"\(self.tfEmail.text!)", "name":"\(self.tfName.text!)", "phone-number": "\(self.tfPhone.text!)"])
-
+                                            .child(self.tfEmail.text!.replacingOccurrences(of: ".", with: ","))
+                                            .setValue(["email":"\(self.tfEmail.text!)",
+                                                "name":"\(self.tfName.text!)",
+                                                "phone-number": "\(self.tfPhone.text!)"])
+                                        // Add more things into this Dctionary, Maybe? ^
+                            
                                         do {
-                                            //force to logout, and log back on the loginPage
+                                            //force to logout, and log back on the loginPage? Segue to Home?
                                             try Auth.auth().signOut()
                                             self.performSegue(withIdentifier: "backToIndex", sender: nil)
                                         } catch {}
@@ -42,9 +45,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             //alert this print
             print(" Please enter a valid email or password")
         }
-        
-        
-        
     }
     
     // The datePicker which will be initialized when the user clicks on the text field

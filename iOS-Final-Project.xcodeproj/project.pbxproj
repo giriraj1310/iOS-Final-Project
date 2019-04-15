@@ -32,6 +32,7 @@
 		AE547E90226486CC007629E2 /* WebContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E8F226486CC007629E2 /* WebContentViewController.swift */; };
 		AE547E982264969C007629E2 /* windowXPsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE547E972264969C007629E2 /* windowXPsound.mp3 */; };
 		AE61FACE22645D7200B0B566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */; };
+		AEC10F9422652E8F000F8499 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC10F9322652E8F000F8499 /* Thread.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		AE547E8F226486CC007629E2 /* WebContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentViewController.swift; sourceTree = "<group>"; };
 		AE547E972264969C007629E2 /* windowXPsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = windowXPsound.mp3; sourceTree = "<group>"; };
 		AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AEC10F9322652E8F000F8499 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		D07329111DBAB9063EF3C050 /* Pods-iOS-Final-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Final-Project.release.xcconfig"; path = "Target Support Files/Pods-iOS-Final-Project/Pods-iOS-Final-Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				AE29A8802255EFA4006CD4EB /* AppDelegate.swift */,
 				AE02424222567C0400079B9B /* Account.swift */,
 				AE4FD31E225FFD01004998E0 /* Data.swift */,
+				AEC10F9322652E8F000F8499 /* Thread.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE29A8832255EFA4006CD4EB /* ViewController.swift in Sources */,
+				AEC10F9422652E8F000F8499 /* Thread.swift in Sources */,
 				AE547E8C226483DB007629E2 /* ViewPostViewController.swift in Sources */,
 				AE4FD31F225FFD01004998E0 /* Data.swift in Sources */,
 				AE4FD319225FEF5A004998E0 /* RegisterViewController.swift in Sources */,
