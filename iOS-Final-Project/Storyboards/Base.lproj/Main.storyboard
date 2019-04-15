@@ -54,7 +54,7 @@
                                     <outlet property="delegate" destination="wvg-EJ-cvp" id="UjV-0p-h9E"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_ver1" translatesAutoresizingMaskIntoConstraints="NO" id="FKU-DN-GyS">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="FKU-DN-GyS">
                                 <rect key="frame" x="77" y="61" width="240" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,6 +143,9 @@
                                 <rect key="frame" x="84" y="436" width="192" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="submit.png"/>
+                                <connections>
+                                    <action selector="btnRegisterWithSender:" destination="VyW-Av-DFQ" eventType="touchUpInside" id="MV3-AE-l4D"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-Em-kAC">
                                 <rect key="frame" x="20" y="271" width="147" height="29"/>
@@ -193,7 +196,7 @@
     </scenes>
     <resources>
         <image name="background.jpg" width="1920" height="1080"/>
-        <image name="logo_ver1" width="29" height="58"/>
+        <image name="logo" width="185" height="38"/>
         <image name="submit.png" width="496" height="189"/>
     </resources>
 </document>

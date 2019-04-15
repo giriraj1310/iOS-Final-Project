@@ -1,5 +1,5 @@
 import UIKit
-
+import Firebase
 class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var tfName: UITextField!
@@ -9,6 +9,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var tfDatePicker: UITextField!
     @IBOutlet var lblGender: UILabel!
     @IBOutlet var swGender: UISwitch!
+    
+    @IBAction func btnRegister(sender: UIButton){
+        Auth.auth().createUser(withEmail: tfEmail.text!, password: tfPassword.text!, completion: {(user,error) in
+            print(Auth.auth().currentUser?.email)
+        })
+    }
+    
     
     // The datePicker which will be initialized when the user clicks on the text field
     let datePicker = UIDatePicker()
@@ -29,17 +36,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // The max date is today
-        datePicker.maximumDate = Date();
-        
-        
-        if lblGender.text == "Male" {
-            swGender.setOn(true, animated: true)
-        } else {
-            swGender.setOn(false, animated: true)
-        }
-        
-        showDatePicker()
+//        // The max date is today
+//        datePicker.maximumDate = Date();
+//
+//
+//        if lblGender.text == "Male" {
+//            swGender.setOn(true, animated: true)
+//        } else {
+//            swGender.setOn(false, animated: true)
+//        }
+//
+//        showDatePicker()
     }
     
     func showDatePicker(){

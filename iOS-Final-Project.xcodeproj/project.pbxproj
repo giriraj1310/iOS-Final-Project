@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		539843CB87834FC7FAE1C94A /* Pods_iOS_Final_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B7A6080A4EB8AF17BEF83D /* Pods_iOS_Final_Project.framework */; };
 		AE0242412256669700079B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0242402256669700079B9B /* Assets.xcassets */; };
 		AE02424322567C0400079B9B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE02424222567C0400079B9B /* Account.swift */; };
 		AE02424522567DF300079B9B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE02424422567DF200079B9B /* SiteCell.swift */; };
@@ -23,9 +24,12 @@
 		AE4FD31B225FF123004998E0 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE4FD31A225FF123004998E0 /* background.jpg */; };
 		AE4FD31D225FF1DA004998E0 /* submit.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4FD31C225FF1D9004998E0 /* submit.png */; };
 		AE4FD31F225FFD01004998E0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4FD31E225FFD01004998E0 /* Data.swift */; };
+		AE61FACE22645D7200B0B566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02F45B2F987DDEB5F6EE1EF5 /* Pods-iOS-Final-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Final-Project.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Final-Project/Pods-iOS-Final-Project.debug.xcconfig"; sourceTree = "<group>"; };
+		45B7A6080A4EB8AF17BEF83D /* Pods_iOS_Final_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Final_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0242402256669700079B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE02424222567C0400079B9B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		AE02424422567DF200079B9B /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		AE4FD31A225FF123004998E0 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		AE4FD31C225FF1D9004998E0 /* submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit.png; sourceTree = "<group>"; };
 		AE4FD31E225FFD01004998E0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D07329111DBAB9063EF3C050 /* Pods-iOS-Final-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Final-Project.release.xcconfig"; path = "Target Support Files/Pods-iOS-Final-Project/Pods-iOS-Final-Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 				AE02424C22567EB600079B9B /* WebKit.framework in Frameworks */,
 				AE02424922567EB000079B9B /* libsqlite3.0.tbd in Frameworks */,
 				AE02424A22567EB000079B9B /* libsqlite3.tbd in Frameworks */,
+				539843CB87834FC7FAE1C94A /* Pods_iOS_Final_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +73,7 @@
 				AE02424B22567EB600079B9B /* WebKit.framework */,
 				AE02424722567EB000079B9B /* libsqlite3.0.tbd */,
 				AE02424822567EB000079B9B /* libsqlite3.tbd */,
+				45B7A6080A4EB8AF17BEF83D /* Pods_iOS_Final_Project.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,6 +84,7 @@
 				AE29A87F2255EFA4006CD4EB /* iOS-Final-Project */,
 				AE29A87E2255EFA4006CD4EB /* Products */,
 				AE02424622567EB000079B9B /* Frameworks */,
+				C17AAEE7C0D55D85DDFE3CC9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +105,7 @@
 				AE29A8932255F024006CD4EB /* Images */,
 				AE29A8922255EFF3006CD4EB /* ViewControllers */,
 				AE29A88C2255EFA7006CD4EB /* Info.plist */,
+				AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */,
 				AE0242402256669700079B9B /* Assets.xcassets */,
 			);
 			path = "iOS-Final-Project";
@@ -148,6 +158,15 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		C17AAEE7C0D55D85DDFE3CC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02F45B2F987DDEB5F6EE1EF5 /* Pods-iOS-Final-Project.debug.xcconfig */,
+				D07329111DBAB9063EF3C050 /* Pods-iOS-Final-Project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE29A88F2255EFA7006CD4EB /* Build configuration list for PBXNativeTarget "iOS-Final-Project" */;
 			buildPhases = (
+				A8A1FB484D95EFD9BD0B7B22 /* [CP] Check Pods Manifest.lock */,
 				AE29A8792255EFA4006CD4EB /* Sources */,
 				AE29A87A2255EFA4006CD4EB /* Frameworks */,
 				AE29A87B2255EFA4006CD4EB /* Resources */,
+				A4289C974A7296C717ADDC44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE29A8982255F15A006CD4EB /* loading.png in Resources */,
+				AE61FACE22645D7200B0B566 /* GoogleService-Info.plist in Resources */,
 				AE4FD31D225FF1DA004998E0 /* submit.png in Resources */,
 				AE29A88B2255EFA7006CD4EB /* LaunchScreen.storyboard in Resources */,
 				AE0242412256669700079B9B /* Assets.xcassets in Resources */,
@@ -217,6 +239,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4289C974A7296C717ADDC44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-Final-Project/Pods-iOS-Final-Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-Final-Project/Pods-iOS-Final-Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8A1FB484D95EFD9BD0B7B22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-Final-Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE29A8792255EFA4006CD4EB /* Sources */ = {
@@ -372,9 +445,11 @@
 		};
 		AE29A8902255EFA7006CD4EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02F45B2F987DDEB5F6EE1EF5 /* Pods-iOS-Final-Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2S4YX92GZ;
 				INFOPLIST_FILE = "iOS-Final-Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,9 +464,11 @@
 		};
 		AE29A8912255EFA7006CD4EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D07329111DBAB9063EF3C050 /* Pods-iOS-Final-Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2S4YX92GZ;
 				INFOPLIST_FILE = "iOS-Final-Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
