@@ -1,10 +1,8 @@
-//
-//  ViewController.swift
-//  iOS-Final-Project
-//
-//  Created by Xcode User on 2019-04-04.
-//  Copyright © 2019 Xcode User. All rights reserved.
-//
+
+
+
+
+
 
 import UIKit
 import FirebaseUI

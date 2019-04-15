@@ -86,7 +86,7 @@
                         <outlet property="btnRegister" destination="4d7-42-xJa" id="XOw-2u-f0z"/>
                         <outlet property="txtPassword" destination="1tD-rM-YNx" id="WYe-MD-zaZ"/>
                         <outlet property="txtUsername" destination="Mii-JD-dJZ" id="7Nr-Ae-LBl"/>
-                        <segue destination="4XI-MJ-4ta" kind="presentation" identifier="toHomeViewController" id="WiA-wq-SvD"/>
+                        <segue destination="4XI-MJ-4ta" kind="presentation" identifier="toHomeViewController" animates="NO" id="WiA-wq-SvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -112,7 +112,13 @@
                                 <items>
                                     <navigationItem title="Home" id="XtE-WS-NGj">
                                         <barButtonItem key="leftBarButtonItem" id="nya-0m-cCr"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Pqz-dk-8Hd"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Pqz-dk-8Hd">
+                                            <connections>
+                                                <segue destination="2fL-Fr-Ivq" kind="popoverPresentation" popoverAnchorBarButtonItem="Pqz-dk-8Hd" id="AHF-Sq-ER7">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -121,7 +127,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Refresh" width="121" id="7y3-qM-Anm"/>
-                                    <barButtonItem title="Post" width="121" id="8fH-6b-Af4"/>
+                                    <barButtonItem title="Post" width="121" id="8fH-6b-Af4">
+                                        <connections>
+                                            <segue destination="8PD-Dq-eHy" kind="presentation" id="v8U-aj-3ig"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Account" width="121" id="sCK-78-izo"/>
                                 </items>
                             </toolbar>
@@ -142,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBZ-Pw-ePo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.80000000000001" y="908.9955022488756"/>
+            <point key="canvasLocation" x="148" y="909"/>
         </scene>
         <!--View Post View Controller-->
         <scene sceneID="K2y-eb-uf7">
@@ -260,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgH-Os-cFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="425" y="1698"/>
+            <point key="canvasLocation" x="148" y="1698"/>
         </scene>
         <!--View My Account View Controller-->
         <scene sceneID="wCD-F4-Vot">
@@ -325,18 +335,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcs-0n-t01">
+                                <rect key="frame" x="79" y="584" width="217" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="LogoffWithSender:" destination="2fL-Fr-Ivq" eventType="touchUpInside" id="yNl-ad-Dbf"/>
+                                    <action selector="testLoginWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="5yW-hh-blR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sbM-NE-mzE"/>
                     </view>
                     <connections>
+                        <outlet property="btnLogout" destination="lcs-0n-t01" id="Spr-cm-LW9"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" id="m4D-2a-M2B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skd-i7-tAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lX8-xZ-wOY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1353" y="116"/>
+            <point key="canvasLocation" x="943" y="116"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="7x0-Qd-7lI">
@@ -438,7 +459,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIh-go-zjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4hL-98-W4D" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1020" y="909"/>
+            <point key="canvasLocation" x="-1009" y="909"/>
         </scene>
     </scenes>
     <resources>

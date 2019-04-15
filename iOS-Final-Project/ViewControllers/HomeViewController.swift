@@ -34,7 +34,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let rowNum = indexPath.row
         tableCell.primaryLabel.text = mainDelegate.threads[rowNum].subject
         tableCell.secondaryLabel.text = mainDelegate.threads[rowNum].body
-        //        tableCell.myimageView.image = UIImage(named:mainDelegate.people[rowNum].avatarLink!)
+        tableCell.thirdLabel.text = "Posted by:" + mainDelegate.threads[rowNum].poster!
+        //tableCell.myimageView.image = UIImage(named:mainDelegate.people[rowNum].avatarLink!)
         tableCell.accessoryType = .disclosureIndicator
         tableCell.backgroundColor = UIColor.clear
         return tableCell
