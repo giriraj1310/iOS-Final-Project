@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseUI
+import Firebase
 
 //    Test Commit and some comments:
 //    This view controller should check if the user has already logged in once (userdefault)
@@ -15,9 +17,11 @@ import UIKit
 
 //Login View Controller
 //Author:
-class ViewController: UIViewController, UITextFieldDelegate{
+class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    var authUI:FUIAuth?
+    
     @IBOutlet var txtUsername:UITextField!
     @IBOutlet var txtPassword:UITextField!
     @IBOutlet var btnLogin:UIButton!
@@ -29,34 +33,62 @@ class ViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func testLogin(sender:UIButton){
-        if mainDelegate.login(loginUsername: txtUsername.text!, loginPassword: txtPassword.text!){
-            let alert = UIAlertController(title: "Logging in",
-                                          message: "Welcome, " + txtUsername.text!,
-                                          preferredStyle: .alert)
-            
-            let cancelAction = UIAlertAction(title: "Ok",
-                                             style: .cancel,
-                                             handler: nil)
-            alert.addAction(cancelAction)
-            present(alert, animated:true)
+        if Auth.auth().currentUser == nil {
+            if let authVC = authUI?.authViewController(){
+                present(authVC, animated: true, completion: nil)
+            }
+//            Auth.auth().signIn(withEmail: txtUsername.text, password: txtPassword.text, completion: { (user, error) in
+//                if error == nil {
+//                    self.btnLogin.setTitle("Logout", for: .normal)
+//                }
+//            })
         } else {
-            let alert = UIAlertController(title: "Failed to login!",
-                                                  message: "Invalid Username or Password",
-                                                  preferredStyle: .alert)
-            
-            let cancelAction = UIAlertAction(title: "Ok",
-                                             style: .cancel,
-                                             handler: nil)
-            alert.addAction(cancelAction)
-            present(alert, animated:true)
+            do {
+                try Auth.auth().signOut()
+                self.btnLogin.setTitle("Login", for: .normal)
+            } catch {}
         }
+        
+//        if mainDelegate.login(loginUsername: txtUsername.text!, loginPassword: txtPassword.text!){
+//            let alert = UIAlertController(title: "Logging in",
+//                                          message: "Welcome, " + txtUsername.text!,
+//                                          preferredStyle: .alert)
+//
+//            let cancelAction = UIAlertAction(title: "Ok",
+//                                             style: .cancel,
+//                                             handler: nil)
+//            alert.addAction(cancelAction)
+//            present(alert, animated:true)
+//        } else {
+//            let alert = UIAlertController(title: "Failed to login!",
+//                                                  message: "Invalid Username or Password",
+//                                                  preferredStyle: .alert)
+//
+//            let cancelAction = UIAlertAction(title: "Ok",
+//                                             style: .cancel,
+//                                             handler: nil)
+//            alert.addAction(cancelAction)
+//            present(alert, animated:true)
+//        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeControlsInView()
         
+        authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        let providers :[FUIAuthProvider] = [FUIGoogleAuth(), FUIEmailAuth()]
+        authUI?.providers = providers
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        if error == nil {
+            btnLogin.setTitle("Logout", for: .normal)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

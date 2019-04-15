@@ -8,4 +8,5 @@ target 'iOS-Final-Project' do
   # Pods for iOS-Final-Project
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
+	pod 'FirebaseUI'
 end
