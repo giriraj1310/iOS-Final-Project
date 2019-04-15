@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AS6-Ma-R9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1353" y="909"/>
+            <point key="canvasLocation" x="1352.8" y="908.9955022488756"/>
         </scene>
         <!--Web Content View Controller-->
         <scene sceneID="9NP-W8-zSR">
@@ -244,6 +244,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wef-ql-KFM">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6Wz-BR-yNT">
+                                <rect key="frame" x="169" y="221" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pwj-E7-BRv"/>
@@ -251,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abg-fq-ffL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2311" y="909"/>
+            <point key="canvasLocation" x="2309.5999999999999" y="908.9955022488756"/>
         </scene>
         <!--Create Post View Controller-->
         <scene sceneID="Wws-Nz-2zR">
@@ -472,6 +485,6 @@
         <image name="submit.png" width="496" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WiA-wq-SvD"/>
+        <segue reference="GQt-S2-67Z"/>
     </inferredMetricsTieBreakers>
 </document>

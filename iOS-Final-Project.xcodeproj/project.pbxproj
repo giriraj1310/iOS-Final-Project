@@ -30,6 +30,7 @@
 		AE547E8C226483DB007629E2 /* ViewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E8B226483DB007629E2 /* ViewPostViewController.swift */; };
 		AE547E8E22648489007629E2 /* ViewMyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E8D22648489007629E2 /* ViewMyAccountViewController.swift */; };
 		AE547E90226486CC007629E2 /* WebContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE547E8F226486CC007629E2 /* WebContentViewController.swift */; };
+		AE547E982264969C007629E2 /* windowXPsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE547E972264969C007629E2 /* windowXPsound.mp3 */; };
 		AE61FACE22645D7200B0B566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		AE547E8B226483DB007629E2 /* ViewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostViewController.swift; sourceTree = "<group>"; };
 		AE547E8D22648489007629E2 /* ViewMyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMyAccountViewController.swift; sourceTree = "<group>"; };
 		AE547E8F226486CC007629E2 /* WebContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentViewController.swift; sourceTree = "<group>"; };
+		AE547E972264969C007629E2 /* windowXPsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = windowXPsound.mp3; sourceTree = "<group>"; };
 		AE61FACD22645D7200B0B566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D07329111DBAB9063EF3C050 /* Pods-iOS-Final-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Final-Project.release.xcconfig"; path = "Target Support Files/Pods-iOS-Final-Project/Pods-iOS-Final-Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 		AE29A87F2255EFA4006CD4EB /* iOS-Final-Project */ = {
 			isa = PBXGroup;
 			children = (
+				AE547E9622649662007629E2 /* Sounds */,
 				AE29A8962255F04E006CD4EB /* Database */,
 				AE29A8952255F034006CD4EB /* Storyboards */,
 				AE29A8942255F02B006CD4EB /* Classes */,
@@ -174,6 +177,14 @@
 				AE02424D225682B900079B9B /* Procrastify.db */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		AE547E9622649662007629E2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AE547E972264969C007629E2 /* windowXPsound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		C17AAEE7C0D55D85DDFE3CC9 /* Pods */ = {
@@ -249,6 +260,7 @@
 				AE29A8982255F15A006CD4EB /* loading.png in Resources */,
 				AE61FACE22645D7200B0B566 /* GoogleService-Info.plist in Resources */,
 				AE4FD31D225FF1DA004998E0 /* submit.png in Resources */,
+				AE547E982264969C007629E2 /* windowXPsound.mp3 in Resources */,
 				AE29A88B2255EFA7006CD4EB /* LaunchScreen.storyboard in Resources */,
 				AE0242412256669700079B9B /* Assets.xcassets in Resources */,
 				AE4FD31B225FF123004998E0 /* background.jpg in Resources */,

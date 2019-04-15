@@ -8,8 +8,11 @@
 
 import UIKit
 import UserNotifications
+import AVFoundation
 
 class HomeViewController: UIViewController {
+    var forcePlayOnce: Bool = false
+    var soundPlayer: AVAudioPlayer?
     
     @IBAction func unwindToHomeVC(sender: UIStoryboardSegue){
         
@@ -17,7 +20,25 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        notification()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let soundURL = Bundle.main.path(forResource: "windowXPsound", ofType: "mp3")
+        let url = URL(fileURLWithPath: soundURL!)
+        soundPlayer = try! AVAudioPlayer.init(contentsOf: url)
+        soundPlayer?.currentTime = 0
+        soundPlayer?.volume = 80
+        soundPlayer?.numberOfLoops = 0
+        
+        if forcePlayOnce == false {
+        soundPlayer?.play()
+            forcePlayOnce = true
+        }
+    }
+    
+    func notification(){
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
             //
@@ -25,7 +46,7 @@ class HomeViewController: UIViewController {
         
         let content = UNMutableNotificationContent()
         content.title = "Procrastinating?"
-        content.body = "Procrastinate no more"
+        content.body = "Procrastinate in the app instead"
         
         let date = Date().addingTimeInterval(5)
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
@@ -38,9 +59,8 @@ class HomeViewController: UIViewController {
         center.add(request) { (Error) in
             //
         }
-        // Do any additional setup after loading the view.
+        
     }
-    
 
     /*
     // MARK: - Navigation
