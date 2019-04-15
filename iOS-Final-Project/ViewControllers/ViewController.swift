@@ -87,6 +87,7 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         if error == nil {
+            self.performSegue(withIdentifier: "toHomeViewController", sender: nil)
             btnLogin.setTitle("Logout", for: .normal)
         }
     }

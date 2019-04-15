@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+
 class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var tfName: UITextField!
