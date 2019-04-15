@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseUI
 import Firebase
+import UserNotifications
 
 //    Test Commit and some comments:
 //    This view controller should check if the user has already logged in once (userdefault)
@@ -74,6 +75,27 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            //
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Procrastinating?"
+        content.body = "Procrastinate no more"
+        
+        let date = Date().addingTimeInterval(15)
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        
+        center.add(request) { (Error) in
+            //
+        }
         initializeControlsInView()
         
         authUI = FUIAuth.defaultAuthUI()
