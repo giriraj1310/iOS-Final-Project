@@ -33,7 +33,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? SiteCell ?? SiteCell(style: .default, reuseIdentifier: "cell")
         
-        
         let rowNum = indexPath.row
         tableCell.primaryLabel.text = mainDelegate.threads[rowNum].subject
         tableCell.secondaryLabel.text = mainDelegate.threads[rowNum].body
@@ -44,7 +43,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return tableCell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        mainDelegate.intSelected = indexPath.row
+        performSegue(withIdentifier: "toPost_vc", sender: nil)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         mainDelegate.retrieveThreadsData()

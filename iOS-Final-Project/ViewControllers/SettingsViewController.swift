@@ -1,10 +1,4 @@
-//
-//  SettingsViewController.swift
-//  iOS-Final-Project
-//
-//  Created by Xcode User on 2019-04-15.
-//  Copyright © 2019 Xcode User. All rights reserved.
-//
+
 
 import UIKit
 import Firebase
@@ -34,8 +28,8 @@ class SettingsViewController: UIViewController {
         let spinImage = UIImage(named: "img3.png")
         spinLayer = CALayer.init()
         spinLayer?.contents = spinImage?.cgImage
-        spinLayer?.bounds = CGRect(x: 0, y:0, width: 150, height: 150)
-        spinLayer?.position = CGPoint(x:200, y:200)
+        spinLayer?.bounds = CGRect(x: 0, y:0, width: 80, height: 80)
+        spinLayer?.position = CGPoint(x:200, y:500)
         self.view.layer.addSublayer(spinLayer!)
         
         let moveAnimation = CABasicAnimation(keyPath: "transform.rotation")

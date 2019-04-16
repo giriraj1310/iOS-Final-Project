@@ -13,12 +13,14 @@ import FirebaseUI
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
     var ref : DatabaseReference?
     var forcePlayOnce: Bool = false
+    var intSelected: Int = 0
     var threads: [Thread] = []
     var window: UIWindow?
-   
+    
+    
     func retrieveThreadsData(){
         ref?.child("threads").observe(.childAdded, with:{ (snapshot) in
             if let threadDictionary =  snapshot.value as? [String:Any]{
