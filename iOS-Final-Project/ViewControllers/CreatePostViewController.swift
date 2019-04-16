@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseUI
 
 class CreatePostViewController: UIViewController {
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+    var authUI:FUIAuth?
 
+    @IBOutlet var btnSubmit:UIButton!
+    @IBOutlet var txtTopic:UITextField!
+    @IBOutlet var txtSubject:UITextField!
+    @IBOutlet var txtBody:UITextView!
+    
+    @IBAction func btnSubmit(sender:UIButton){
+        let topic = txtTopic.text!.replacingOccurrences(of: ".", with: ",")
+        let subject = txtSubject.text!.replacingOccurrences(of: ".", with: ",")
+        let body = txtBody.text!.replacingOccurrences(of: ".", with: ",")
+        
+        //Adding Threads
+                mainDelegate.ref?.child("threads").childByAutoId()
+                    .setValue(["topic":"\(topic)",
+                               "subject":"\(subject)",
+                               "body":"\(body)",
+                               "date":"\(Date())",
+                               "poster":"chongl"])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        btnSubmit.layer.cornerRadius = 16
+        btnSubmit.layer.borderWidth = 1.0
+        btnSubmit.layer.borderColor = UIColor.blue.cgColor
+        
+        
         // Do any additional setup after loading the view.
     }
     
