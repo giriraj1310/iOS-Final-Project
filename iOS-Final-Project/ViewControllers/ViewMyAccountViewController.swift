@@ -1,30 +1,28 @@
-//
-//  ViewMyAccountViewController.swift
-//  iOS-Final-Project
-//
-//  Created by Xcode User on 2019-04-15.
-//  Copyright © 2019 Xcode User. All rights reserved.
-//
+
 
 import UIKit
+import Firebase
+import FirebaseUI
 
 class ViewMyAccountViewController: UIViewController {
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+    var authUI:FUIAuth?
 
+    @IBOutlet var tfAddress:UITextField!
+    @IBOutlet var tfPhone:UITextField!
+    
+    @IBAction func saveChanges(sender: UIButton){
+        var email:String = (Auth.auth().currentUser?.email!)!
+        var emailId:String = (Auth.auth().currentUser?.email?.replacingOccurrences(of: ".", with: ","))!
+        
+        mainDelegate.ref?.child("accounts/\(emailId)")
+            .setValue(["email":"\(email)",
+                "address":"\(self.tfAddress.text!)",
+                "phone-number": "\(self.tfPhone.text!)"])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

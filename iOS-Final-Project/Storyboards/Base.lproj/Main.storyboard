@@ -451,6 +451,7 @@
                                 <connections>
                                     <action selector="LogoffWithSender:" destination="2fL-Fr-Ivq" eventType="touchUpInside" id="PtK-X8-Jdw"/>
                                     <action selector="btnSubmitWithSender:" destination="8PD-Dq-eHy" eventType="touchUpInside" id="Mqy-vB-yOn"/>
+                                    <action selector="saveChangesWithSender:" destination="cgb-Ou-4sW" eventType="touchUpInside" id="ZIZ-b8-PQo"/>
                                     <action selector="testLoginWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="Xwv-EH-ViY"/>
                                 </connections>
                             </button>
@@ -472,6 +473,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RVX-15-k1t"/>
                     </view>
+                    <connections>
+                        <outlet property="tfAddress" destination="Sgz-DE-M6h" id="Wmv-KC-yEy"/>
+                        <outlet property="tfPhone" destination="opq-LH-vwW" id="V2U-Y9-Kre"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWL-WR-8pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FyZ-li-VY7" userLabel="Exit" sceneMemberID="exit"/>
