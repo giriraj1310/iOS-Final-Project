@@ -17,14 +17,13 @@ class SiteCell: UITableViewCell {
 
     let primaryLabel = UILabel();
     let secondaryLabel = UILabel();
-    let thirdLabel = UILabel();
-    var myimageView = UIImageView();
+    let myimageView = UIImageView();
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         primaryLabel.textAlignment = .left
-        primaryLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        primaryLabel.font = UIFont.boldSystemFont(ofSize: 30)
         primaryLabel.backgroundColor = .clear
-        primaryLabel.textColor = .gray
+        primaryLabel.textColor = .green
         primaryLabel.layer.backgroundColor = UIColor.clear.cgColor
         
         secondaryLabel.textAlignment = .left
@@ -33,19 +32,10 @@ class SiteCell: UITableViewCell {
         secondaryLabel.textColor = .blue
         secondaryLabel.layer.backgroundColor = UIColor.clear.cgColor
         
-        thirdLabel.textAlignment = .left
-        thirdLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        thirdLabel.backgroundColor = .clear
-        thirdLabel.textColor = .black
-        thirdLabel.layer.backgroundColor = UIColor.clear.cgColor
-        
-        myimageView.image = UIImage(named:"someicon.png")
-        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(primaryLabel)
         contentView.addSubview(secondaryLabel)
-        contentView.addSubview(thirdLabel)
         contentView.addSubview(myimageView)
     }
     
@@ -54,11 +44,9 @@ class SiteCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-        primaryLabel.frame = CGRect(x: 5, y: 5, width: 460, height: 30)
-        secondaryLabel.frame = CGRect(x: 85, y: 40, width: 250, height: 20)
-        thirdLabel.frame = CGRect(x:190, y:75, width:460, height:16)
-        
-        myimageView.frame = CGRect(x: 10, y: 30, width: 60, height: 60)
+        primaryLabel.frame = CGRect(x: 100, y: 5, width: 460, height: 30)
+        secondaryLabel.frame = CGRect(x: 100, y: 40, width: 460, height: 20)
+        myimageView.frame = CGRect(x: 5, y: 5, width: 60, height: 60)
     }
     
     override func awakeFromNib() {

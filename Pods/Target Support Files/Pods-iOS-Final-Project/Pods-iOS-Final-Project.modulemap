@@ -1,6 +1,0 @@
-framework module Pods_iOS_Final_Project {
-  umbrella header "Pods-iOS-Final-Project-umbrella.h"
-
-  export *
-  module * { export * }
-}
