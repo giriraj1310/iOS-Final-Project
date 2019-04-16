@@ -11,6 +11,8 @@ import UserNotifications
 import AVFoundation
 import Firebase
 
+private let refreshControl = UIRefreshControl()
+
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? SiteCell ?? SiteCell(style: .default, reuseIdentifier: "cell")
         
+        
         let rowNum = indexPath.row
         tableCell.primaryLabel.text = mainDelegate.threads[rowNum].subject
         tableCell.secondaryLabel.text = mainDelegate.threads[rowNum].body
@@ -40,7 +43,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableCell.backgroundColor = UIColor.clear
         return tableCell
     }
-
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         mainDelegate.retrieveThreadsData()
     }

@@ -313,6 +313,7 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="LogoffWithSender:" destination="2fL-Fr-Ivq" eventType="touchUpInside" id="Gh8-vq-53a"/>
+                                    <action selector="btnSubmitWithSender:" destination="8PD-Dq-eHy" eventType="touchUpInside" id="Ecu-0c-r23"/>
                                     <action selector="testLoginWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="YaE-Nb-su9"/>
                                 </connections>
                             </button>
@@ -320,6 +321,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eIJ-rL-Adh"/>
                     </view>
+                    <connections>
+                        <outlet property="btnSubmit" destination="E11-4h-jsj" id="6ma-Nb-SEi"/>
+                        <outlet property="txtBody" destination="wsI-HO-33G" id="nE9-zD-Qlt"/>
+                        <outlet property="txtSubject" destination="dJy-Nm-4ks" id="z9e-96-1LS"/>
+                        <outlet property="txtTopic" destination="186-Z0-YFH" id="VVz-ot-J8a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgH-Os-cFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wIB-Xn-RwO" userLabel="Exit" sceneMemberID="exit"/>

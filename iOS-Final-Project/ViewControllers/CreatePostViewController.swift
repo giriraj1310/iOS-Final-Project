@@ -23,6 +23,8 @@ class CreatePostViewController: UIViewController {
         let topic = txtTopic.text!.replacingOccurrences(of: ".", with: ",")
         let subject = txtSubject.text!.replacingOccurrences(of: ".", with: ",")
         let body = txtBody.text!.replacingOccurrences(of: ".", with: ",")
+        let userArr = Auth.auth().currentUser?.email?.components(separatedBy: "@")
+        let user = userArr![0].replacingOccurrences(of: ".", with: ",")
         
         //Adding Threads
                 mainDelegate.ref?.child("threads").childByAutoId()
@@ -30,7 +32,16 @@ class CreatePostViewController: UIViewController {
                                "subject":"\(subject)",
                                "body":"\(body)",
                                "date":"\(Date())",
-                               "poster":"chongl"])
+                               "poster":"\(user)"])
+        mainDelegate.retrieveThreadsData()
+        txtTopic.text = ""
+        txtSubject.text = ""
+        txtBody.text = ""
+        
+        let alertController = UIAlertController(title: "Success!", message: "\(user) has successfully posted something", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
     }
     
     override func viewDidLoad() {
@@ -40,18 +51,5 @@ class CreatePostViewController: UIViewController {
         btnSubmit.layer.borderColor = UIColor.blue.cgColor
         
         
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
