@@ -15,6 +15,7 @@ import FirebaseUI
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var ref : DatabaseReference?
+    var forcePlayOnce: Bool = false
     var threads: [Thread] = []
     var window: UIWindow?
    

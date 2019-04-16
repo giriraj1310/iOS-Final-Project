@@ -183,9 +183,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RV7-r9-7c7"/>
                     </view>
-                    <connections>
-                        <segue destination="en9-Ed-OIe" kind="presentation" id="08o-zO-0hQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AS6-Ma-R9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abg-fq-ffL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2309.5999999999999" y="908.9955022488756"/>
+            <point key="canvasLocation" x="2409" y="1698"/>
         </scene>
         <!--Create Post View Controller-->
         <scene sceneID="Wws-Nz-2zR">
@@ -351,7 +348,7 @@
                     </view>
                     <connections>
                         <outlet property="btnLogout" destination="lcs-0n-t01" id="Spr-cm-LW9"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" id="m4D-2a-M2B"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toIndexVC" id="mPq-kQ-F0P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skd-i7-tAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -468,6 +465,6 @@
         <image name="submit.png" width="496" height="189"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dze-CS-9iR"/>
+        <segue reference="mPq-kQ-F0P"/>
     </inferredMetricsTieBreakers>
 </document>

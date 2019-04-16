@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var authUI:FUIAuth?
-    var forcePlayOnce: Bool = false
     var soundPlayer: AVAudioPlayer?
     @IBOutlet var txtUsername:UITextField!
     @IBOutlet var txtPassword:UITextField!
@@ -80,7 +79,7 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
         let url = URL(fileURLWithPath: soundURL!)
         soundPlayer = try! AVAudioPlayer.init(contentsOf: url)
         soundPlayer?.currentTime = 0
-        soundPlayer?.volume = 50
+        soundPlayer?.volume = 30
         soundPlayer?.numberOfLoops = 0
     
         //Temporary auto log off
@@ -96,9 +95,9 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
         //                       "date":"\(Date())",
         //                       "poster":"chongl"])
     
-        if forcePlayOnce == false {
-        soundPlayer?.play()
-        forcePlayOnce = true
+        if mainDelegate.forcePlayOnce == false {
+            soundPlayer?.play()
+            mainDelegate.forcePlayOnce = true
         }
     
     }
